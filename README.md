@@ -15,6 +15,7 @@
 <img src="https://img.shields.io/badge/博客-萌新源-red">
 </a>
 </p>
+
 # 介绍
 
 本插件是基于nonebot开发的插件，目的是为了让萌新更好入门nonebot插件编写，整体采用中文编程，灵感来源手机端QRspeed机器人的词库
