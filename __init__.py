@@ -4,6 +4,7 @@
 import re
 from resource import Resource
 from checker import Checker
+from group_message import get_msg
 
 
 class Translate:
@@ -38,8 +39,20 @@ class Translate:
                     self.output(msg)
             elif '返回' in msg:
                 self.read_type = 0
+            elif '定义' in msg:
+                """消息响应器注册"""
+                self.key_word = msg.strip().replace(' ','').strip('定义群消息事件关键词')
+            elif '发送' in msg:
+                """发送消息相应器"""
+                self.send_msg(msg)
             else:
                 pass
+
+    def send_msg(self,string):
+        """发送消息"""
+        msg = string.strip().replace(' ','').strip('发送')# 获取发送内容
+        
+
 
     def value(self):
         """读取和存储变量"""
